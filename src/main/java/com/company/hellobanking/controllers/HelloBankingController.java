@@ -1,4 +1,4 @@
-package com.company.hellobanking.models;
+package com.company.hellobanking.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
