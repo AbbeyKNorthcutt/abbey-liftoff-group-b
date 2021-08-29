@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 public class HelloBankingController {
 
     @GetMapping
-    @ResponseBody
-    public String hello(){
-        return "Welcome To Your Banking made easy";
+    public String  DisplayLanding(Model model){
+
+        return "index";
     }
 
 }
