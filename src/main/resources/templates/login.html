@@ -4,8 +4,17 @@
 </head>
 <body class ="container">
 
-<nav th: replace="fragments :: navbar"></nav>
+<nav th: replace="fragments :: navbar">
+<div>
+    <form method="post" action="/login">
+        <button type="submit" class="btn btn-primary">Sign-In</button>
+    </form>
 
+    <form method="post" action="/register">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+</nav>
 <div class ="container text-center">
     <h1>Please Sign-In!</h1>
 </div>
