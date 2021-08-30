@@ -10,7 +10,7 @@ public class HelloBankingController {
     @GetMapping
     public String  DisplayLanding(Model model){
 
-        return "index";
+        return "landing";
     }
 
 }
