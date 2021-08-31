@@ -92,6 +92,7 @@ public class AuthenticationController {
 
         return "redirect:";
     }
+
     // Handling the login data
     @GetMapping("/login")
     public String displayLoginForm(Model model){
@@ -112,7 +113,7 @@ public class AuthenticationController {
         User theUser = userRepository.findByUsername(loginFormDTO.getUsername());
 
         if(theUser == null){
-            errors.rejectValue("userrname", "username.invalid",
+            errors.rejectValue("username", "username.invalid",
                     "The given username does not exist");
             model.addAttribute("title","Log In");
             return "login";
