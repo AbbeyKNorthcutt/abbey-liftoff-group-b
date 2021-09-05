@@ -4,8 +4,17 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+
+/*
+Our login and registration forms will use DTOs
+to help with form rendering and processing
+to help with form rendering and processing
+--since these forms will be similar—both require a username and password
+—we’ll use inheritance in creating our DTOs.
+*/
 public class LoginFormDTO {
 
+    /*The DTO for the login form needs only username and password fields.*/
     @NotNull
     @NotBlank
     @Size(min = 3, max = 20, message = "Invalid username. Must be between 3 and 20 characters.")

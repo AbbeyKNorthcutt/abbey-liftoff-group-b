@@ -3,12 +3,13 @@ package com.company.hellobanking.models;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import java.util.List;
 import java.util.Objects;
 
 
 /*Id generated for each user*/
 @MappedSuperclass
-public class AbstractEntity {
+public abstract class AbstractEntity {
     @Id
     @GeneratedValue
     private int id;
@@ -27,4 +28,5 @@ public class AbstractEntity {
 
     @Override
     public int hashCode() { return Objects.hash(id);}
+
 }

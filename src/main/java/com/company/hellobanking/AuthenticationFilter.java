@@ -31,6 +31,7 @@ public class AuthenticationFilter implements HandlerInterceptor {
         return false;
     }
 
+
     @Override
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,
@@ -44,8 +45,11 @@ public class AuthenticationFilter implements HandlerInterceptor {
             return true;
         }
 
+       /*
         // The user is NOT logged in
-        response.sendRedirect("/login");
+        response.sendRedirect("/login");*/  // this was creating the infinite loop that was
+                                              // redirecting to the /login page several times and
+                                                   //stopping the application to run on the localhost
         return false;
     }
 }
