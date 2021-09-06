@@ -37,6 +37,13 @@
             </ul>
         </div>
     </div>
+    <div>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/register}">Register</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <div>
@@ -48,8 +55,9 @@
 <form th:action="@{/login}" method="post">
     <input type="submit" value="Sign-In" />
 </form>
-
-<footer th:replace = "fragments :: footer"></footer>
+<div>
+  <footer th:replace = "fragments :: footer"></footer>
+</div>
 
 </body>
 </html>

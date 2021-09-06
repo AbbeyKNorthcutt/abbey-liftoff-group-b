@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<head th:fragment="head">
+    <title>Personal Banking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
 </head>
-<body class ="container">
+<body>
 
-<nav th: replace="fragments :: navbar">
-<div>
-    <form th:action="@{/login}" method="post">
-        <button type="submit" class="btn btn-primary"><a th:href="@{/login}">Sign-In</a></button>
-    </form>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <form th:action="@{/register}" method="post">
-        <button type="submit" class="btn btn-primary"><a th:href="@{/register}">Register</a></button>
-    </form>
-</div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/login}">Sign-In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/register}">Register</a>
+            </li>
+        </ul>
+    </div>
 </nav>
-<div class ="container text-center">
+<div>
     <h1>Please Sign-In!</h1>
 </div>
 
 <form th:action="@{/personal_banking}" method="post">
+
     <div class="form-group">
         <label th:for="username">Username
             <input class = "form-control" th:field="${loginFormDTO.username}">
         </label>
         <p class="error" th:errors="${loginFormDTO.username}"></p>
     </div>
+
     <div class="form-group">
         <label th:for="password">Password
             <input class = "form-control" th:field="${loginFormDTO.password}" type="password">
         </label>
         <p class="error" th:errors="${loginFormDTO.password}"></p>
     </div>
-    <input type="submit" class="btn btn-primary" value="Sign-In">
+
+    <input type="submit" value="Sign-In"/>
 </form>
 
 <p>Forgot <a href="/username">Username</a> or <a href="/password">Password</a> ? </p>
 <p>Need Help? <a href="/contact">Chat Here>>></a></p>
 
-<div th:replace="fragments:: footer"></div>
+<div>
+    <footer th:replace = "fragments :: footer"></footer>
+</div>
 
 </body>
 </html>
