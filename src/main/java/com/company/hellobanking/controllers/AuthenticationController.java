@@ -170,4 +170,16 @@ public class AuthenticationController {
         request.getSession().invalidate();
         return "redirect:";
     }
+
+    @RequestMapping("/register_success")
+    public String displayRegisterSuccess(Model model){
+        model.addAttribute("message", "congratulations!! You Are Now Successfully Registered!");
+        return "register_success";
+    }
+
+    @RequestMapping("/personal_banking")
+    public  String dispalyPersonalBanking(Model model){
+        model.addAttribute("message", "Welcome To Your Personal Banking!!");
+        return "personal_banking";
+    }
 }
