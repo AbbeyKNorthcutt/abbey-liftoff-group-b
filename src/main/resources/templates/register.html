@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="ISO-8859-1">
-    <title>Sign Up - CodeJava</title>
-
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace = "fragments :: head">
 </head>
-<body>
-<div class="container text-center">
-    <div>
-        <h1>User Registration - Sign Up</h1>
-    </div>
-    <form th:action="@{/process_register}" th:object="${user}"
-          method="post" style="max-width: 600px; margin: 0 auto;">
-        <div class="m-3">
-            <div class="form-group row">
-                <label class="col-4 col-form-label">E-mail: </label>
-                <div class="col-8">
-                    <input type="email" th:field="*{email}" class="form-control" required />
-                </div>
-            </div>
 
-            <div class="form-group row">
-                <label class="col-4 col-form-label">Password: </label>
-                <div class="col-8">
-                    <input type="password" th:field="*{password}" class="form-control"
-                           required minlength="6" maxlength="10"/>
-                </div>
-            </div>
+<body class ="container">
 
-            <div class="form-group row">
-                <label class="col-4 col-form-label">First Name: </label>
-                <div class="col-8">
-                    <input type="text" th:field="*{firstName}" class="form-control"
-                           required minlength="2" maxlength="20"/>
-                </div>
-            </div>
+<nav th: replace="fragments :: navbar"></nav>
 
-            <div class="form-group row">
-                <label class="col-4 col-form-label">Last Name: </label>
-                <div class="col-8">
-                    <input type="text" th:field="*{lastName}" class="form-control"
-                           required minlength="2" maxlength="20" />
-                </div>
-            </div>
+<div>
+    <form method="post" action="login.html">
+        <button type="submit" class="btn btn-primary">Sign-In</button>
+    </form>
 
-            <div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </div>
-        </div>
+    <form method="post" action="register.html">
+        <button type="submit" class="btn btn-primary">Register</button>
     </form>
 </div>
+
+<div class ="container text-center">
+    <h1>Please Register!</h1>
+</div>
+
+<form method="post" action="register_success.html">
+
+    <div class="form-group">
+        <label th:for="username">Username
+            <input class = "form-control" th:field="${RegisterFormDTO.username}"/>
+        </label>
+        <p class="error" th:errors="${RegisterFormDTO.username}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="Password">Password
+            <input class = "form-control" th:field="${RegisterFormDTO.password}" type="password"/>
+        </label>
+        <p class="error" th:errors="${RegisterFormDTO.password}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="Password">Confirm Password
+            <input class = "form-control" th:field="${RegisterFormDTO.confirmPassword}" type="password"/>
+            <p class="error" th:errors="${RegisterFormDTO.confirmPassword}"></p>
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label th:for="accountNumber">Account Number
+            <input class = "form-control" th:field="${RegisterFormDTO.accountNumber}"/>
+        </label>
+        <p class="error" th:errors="${RegisterFormDTO.accountNumber}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="address">Address
+            <input class = "form-control" th:field="${RegisterFormDTO.address}"/>
+        </label>
+        <p class="error" th:errors="${RegisterFormDTO.address}"></p>
+    </div>
+
+    <input type="submit" class="btn-primary" value="Register" />
+</form>
+
+<p>Forgot <a href="/username">Username</a> or <a href="/password">Password</a> ? </p>
+<p>Need Help? <a href="/contact">Chat Here>>></a></p>
+
+<div th:replace="fragments:: footer"></div>
+
 </body>
 </html>

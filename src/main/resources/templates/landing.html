@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav th:replace = "fragments :: navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="bank.html">Bank</a></li>
+            <li><a href="invest.html">Invest</a></li>
+            <li><a href="borrow.html">Borrow</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class ="container text-center">
+    <h1>Welcome To Your Online Banking !!</h1>
+</div>
+
+<form method="post" action="login.html">
+    <button type="submit" class="btn btn-primary">Sign-In</button>
+</form>
+
+<footer th:replace = "fragments :: footer"></footer>
+
+</body>
+</html>
