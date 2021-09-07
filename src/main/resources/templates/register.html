@@ -49,9 +49,17 @@
             <input class = "form-control" th:field="${registerFormDTO.verifyPassword}" type="password"/>
         </label>
     </div>
+
+    <div class="form-group">
+        <label th:for="email">Email
+            <input class = "form-control" th:field="${registerFormDTO.email}" type="email"/>
+        </label>
+    </div>
+
     <div>
       <input type="submit" value="Register"/>
     </div>
+
 </form>
 
 <p>Forgot <a href="/username">Username</a> or <a href="/password">Password</a> ? </p>

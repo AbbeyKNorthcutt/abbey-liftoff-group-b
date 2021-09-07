@@ -22,5 +22,4 @@ public class RegisterFormDTO extends LoginFormDTO{
         this.verifyPassword = verifyPassword;
     }
 
-
 }

@@ -2,7 +2,7 @@
 -- 1) Create Table users--
 CREATE TABLE user(
 id INT PRIMARY KEY AUTO_INCREMENT,
-username VARCHAR(255),
-pwHash VARCHAR(255)
+username VARCHAR(30),
+pwHash VARCHAR(30),
+email int not null
 );
-

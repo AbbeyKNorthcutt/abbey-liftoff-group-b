@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.criteria.CriteriaBuilder;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -19,12 +20,13 @@ We’ll start by adding a User model */
 public class User extends AbstractEntity{
 
     @NotNull
-    @Size(min=2,max=255)
     private String username;
 
     @NotNull
-    @Size(min=2,max=255)
     private String pwHash;
+
+    @NotNull
+    private String email;
    /*
     //Hashing Passwords--- bcrypt hash algorithm//
     -- make it static so it can be shared by all User objects.
@@ -38,19 +40,26 @@ public class User extends AbstractEntity{
     and uses it to set the value of pwHash
     >> use encoder to create a hash from the given password
     */
-    public User(String username, String password) {
+    public User(String username, String password, String email) {
         this.username = username;
         this.pwHash = encoder.encode(password);
+        this.email = email;
     }
+
 
     public String getUsername() {
         return username;
     }
 
+    public String getEmail(){
+        return email;
+    }
+
     /*User objects should also be responsible for determining
     if a given password is a match for the hash stored by the object*/
     public boolean isMatchingPassword(String password) {
-        return encoder.matches(password, pwHash);
+        String candidateHash = encoder.encode(password);
+        return candidateHash.equals(pwHash);
     }
 
 }

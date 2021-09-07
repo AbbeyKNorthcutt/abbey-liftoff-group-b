@@ -27,7 +27,7 @@ it needs a UserRepository instance. */
 
 @Controller
 public class AuthenticationController {
-    @Autowired
+    final
     UserRepository userRepository;
 
     /* Session-Handling Utilities
@@ -39,6 +39,10 @@ public class AuthenticationController {
 
     /* The static field userSessionKey is the key used to store user IDs */
     private static final String userSessionKey = "user";
+
+    public AuthenticationController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     /* getUserFromSession looks for data with the key user in the user’s session.
     If it finds one, it attempts to retrieve the corresponding User object from the database.
@@ -108,6 +112,9 @@ public class AuthenticationController {
         register a custom error and return the user to the form. */
         String password = registerFormDTO.getPassword();
         String verifyPassword = registerFormDTO.getVerifyPassword();
+
+        String email = registerFormDTO.getEmail();
+
         if (!password.equals(verifyPassword)) {
             errors.rejectValue("password", "passwords.mismatch", "Passwords do not match");
             model.addAttribute("title", "Register");
@@ -116,7 +123,8 @@ public class AuthenticationController {
 
         // If none of the above conditions are met, Create a new User and save in database.
         // Create new userSession and redirect to homepage.
-        User newUser = new User(registerFormDTO.getUsername(), registerFormDTO.getPassword());
+        User newUser = new User(registerFormDTO.getUsername(),
+                registerFormDTO.getPassword(), registerFormDTO.getEmail());
         userRepository.save(newUser);
         setUserSessionKey(request.getSession(), newUser);
 
@@ -178,7 +186,7 @@ public class AuthenticationController {
     }
 
     @RequestMapping("/personal_banking")
-    public  String dispalyPersonalBanking(Model model){
+    public  String displayPersonalBanking(Model model){
         model.addAttribute("message", "Welcome To Your Personal Banking!!");
         return "personal_banking";
     }
