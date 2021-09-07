@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head th:replace = "fragments :: head">
+<head th:fragment="head">
+    <title>Personal Banking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
 </head>
 
-<body class ="container">
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-<nav th: replace="fragments :: navbar"></nav>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/login}">Sign-In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/register}">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <div>
-    <form method="post" action="login.html">
-        <button type="submit" class="btn btn-primary">Sign-In</button>
-    </form>
-
-    <form method="post" action="register.html">
-        <button type="submit" class="btn btn-primary">Register</button>
-    </form>
-</div>
-
-<div class ="container text-center">
     <h1>Please Register!</h1>
 </div>
 
-<form method="post" action="register_success.html">
+<form th:action="@{/register_success}" method="post">
 
     <div class="form-group">
         <label th:for="username">Username
-            <input class = "form-control" th:field="${RegisterFormDTO.username}"/>
+            <input class = "form-control" th:field="${registerFormDTO.username}"/>
         </label>
-        <p class="error" th:errors="${RegisterFormDTO.username}"></p>
+        <p class="error" th:errors="${registerFormDTO.username}"></p>
     </div>
 
     <div class="form-group">
         <label th:for="Password">Password
-            <input class = "form-control" th:field="${RegisterFormDTO.password}" type="password"/>
+            <input class = "form-control" th:field="${registerFormDTO.password}" type="password"/>
         </label>
-        <p class="error" th:errors="${RegisterFormDTO.password}"></p>
+        <p class="error" th:errors="${registerFormDTO.password}"></p>
     </div>
 
     <div class="form-group">
-        <label th:for="Password">Confirm Password
-            <input class = "form-control" th:field="${RegisterFormDTO.confirmPassword}" type="password"/>
-            <p class="error" th:errors="${RegisterFormDTO.confirmPassword}"></p>
+        <label th:for="password">Confirm Password
+            <input class = "form-control" th:field="${registerFormDTO.verifyPassword}" type="password"/>
         </label>
     </div>
-
-    <div class="form-group">
-        <label th:for="accountNumber">Account Number
-            <input class = "form-control" th:field="${RegisterFormDTO.accountNumber}"/>
-        </label>
-        <p class="error" th:errors="${RegisterFormDTO.accountNumber}"></p>
+    <div>
+      <input type="submit" value="Register"/>
     </div>
-
-    <div class="form-group">
-        <label th:for="address">Address
-            <input class = "form-control" th:field="${RegisterFormDTO.address}"/>
-        </label>
-        <p class="error" th:errors="${RegisterFormDTO.address}"></p>
-    </div>
-
-    <input type="submit" class="btn-primary" value="Register" />
 </form>
 
 <p>Forgot <a href="/username">Username</a> or <a href="/password">Password</a> ? </p>
 <p>Need Help? <a href="/contact">Chat Here>>></a></p>
 
-<div th:replace="fragments:: footer"></div>
+
+<div>
+    <footer th:replace = "fragments :: footer"></footer>
+</div>
 
 </body>
 </html>
