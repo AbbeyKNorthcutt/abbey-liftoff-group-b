@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:fragment="head">
-    <title>Personal Banking</title>
+    <title>Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
@@ -54,6 +54,35 @@
         <label th:for="email">Email
             <input class = "form-control" th:field="${registerFormDTO.email}" type="email"/>
         </label>
+        <p class="error" th:errors="${registerFormDTO.email}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="phoneNumber">Phone #
+            <input class = "form-control" th:field="${registerFormDTO.phoneNumber}" type="phoneNumber"/>
+        </label>
+        <p class="error" th:errors="${registerFormDTO.phoneNumber}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="accountNumber">Account Number
+            <input class = "form-control" th:field="${registerFormDTO.accountNumber}" type="accountNumber"/>
+        </label>
+        <p class="error" th:errors="${registerFormDTO.accountNumber}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="socialSecurityNumber">Social Security Number
+            <input class = "form-control" th:field="${registerFormDTO.socialSecurityNumber}" type="socialSecurityNumber"/>
+        </label>
+        <p class="error" th:errors="${registerFormDTO.socialSecurityNumber}"></p>
+    </div>
+
+    <div class="form-group">
+        <label th:for="address">Address
+            <input class = "form-control" th:field="${registerFormDTO.address}" type="address"/>
+        </label>
+        <p class="error" th:errors="${registerFormDTO.address}"></p>
     </div>
 
     <div>

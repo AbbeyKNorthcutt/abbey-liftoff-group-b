@@ -25,10 +25,7 @@ public class LoginFormDTO {
     @Size(min = 5, max = 255, message = "Invalid password. Must be between 5 and 30 characters.")
     private String password;
 
-    @NotNull
-    @NotBlank
-    @Size(min = 5, max = 255, message = "Invalid email. Must be between 5 and 30 characters.")
-    private String email;
+
 
     public String getUsername(){
         return username;
@@ -46,11 +43,5 @@ public class LoginFormDTO {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }

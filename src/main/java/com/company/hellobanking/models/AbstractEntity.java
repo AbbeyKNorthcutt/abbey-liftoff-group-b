@@ -1,6 +1,7 @@
 package com.company.hellobanking.models;
 
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.Objects;
 @MappedSuperclass
 public abstract class AbstractEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     public int getId() {

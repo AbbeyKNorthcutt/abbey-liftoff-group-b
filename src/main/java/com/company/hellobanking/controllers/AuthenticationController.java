@@ -27,7 +27,7 @@ it needs a UserRepository instance. */
 
 @Controller
 public class AuthenticationController {
-    final
+    @Autowired
     UserRepository userRepository;
 
     /* Session-Handling Utilities
@@ -124,7 +124,9 @@ public class AuthenticationController {
         // If none of the above conditions are met, Create a new User and save in database.
         // Create new userSession and redirect to homepage.
         User newUser = new User(registerFormDTO.getUsername(),
-                registerFormDTO.getPassword(), registerFormDTO.getEmail());
+                registerFormDTO.getPassword(), registerFormDTO.getEmail(), registerFormDTO.getAccountNumber(),
+                registerFormDTO.getSocialSecurityNumber(), registerFormDTO.getAddress(),
+                registerFormDTO.getPhoneNumber());
         userRepository.save(newUser);
         setUserSessionKey(request.getSession(), newUser);
 
