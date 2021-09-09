@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:fragment="head">
-    <title>Personal Banking</title>
     <meta charset="utf-8">
     <!--//name attribute provides document-level metadata, applying to the whole page
         //content attribute contains the value for the name attribute
@@ -10,11 +9,12 @@
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" >
     <link th:href="@{/css/bank.css}" rel="stylesheet" >
     <script type ="text/javascript" th:src = "@{/js/bootstrap.js}"></script>
+    <title>Personal Banking</title>
 </head>
 
 <body>
 
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav th:fragment="navbar" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Personal Banking</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
