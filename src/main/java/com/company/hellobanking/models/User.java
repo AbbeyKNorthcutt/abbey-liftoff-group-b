@@ -21,6 +21,12 @@ public class User extends AbstractEntity{
     @Column(name = "username")
     private String username;
 
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
     @Column(name = "password")
     private String pwHash;
 
@@ -31,7 +37,7 @@ public class User extends AbstractEntity{
     private String accountNumber;
 
     @Column(name = "social_security_number")
-    private String socialSecurityNumber;
+    private int socialSecurityNumber;
 
     @Column(name = "address")
     private String address;
@@ -51,9 +57,11 @@ public class User extends AbstractEntity{
     and uses it to set the value of pwHash
     >> use encoder to create a hash from the given password
     */
-    public User(String username, String password, String email,
-                String accountNumber, String socialSecurityNumber, String address, int phoneNumber) {
+    public User(String username, String firstName, String lastName,String password, String email,
+                String accountNumber, int socialSecurityNumber, String address, int phoneNumber) {
         this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.pwHash = encoder.encode(password);
         this.email = email;
         this.accountNumber=accountNumber;
@@ -70,6 +78,20 @@ public class User extends AbstractEntity{
         this.username=username;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName){
+        this.firstName=firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName){
+        this.lastName=lastName;
+    }
+
     public String getEmail(){
         return email;
     }
@@ -84,10 +106,10 @@ public class User extends AbstractEntity{
         this.accountNumber=accountNumber;
     }
 
-    public String getSocialSecurityNumber(){
+    public int getSocialSecurityNumber(){
         return socialSecurityNumber;
     }
-    public void setSocialSecurityNumber(String socialSecurityNumber){
+    public void setSocialSecurityNumber(int socialSecurityNumber){
         this.socialSecurityNumber=socialSecurityNumber;
     }
 
@@ -109,8 +131,7 @@ public class User extends AbstractEntity{
     /*User objects should also be responsible for determining
     if a given password is a match for the hash stored by the object*/
     public boolean isMatchingPassword(String password) {
-        String candidateHash = encoder.encode(password);
-        return candidateHash.equals(pwHash);
+        return encoder.matches(password, pwHash);
     }
 
 }

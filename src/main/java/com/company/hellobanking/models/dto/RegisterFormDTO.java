@@ -1,9 +1,9 @@
 package com.company.hellobanking.models.dto;
 
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.Range;
+
+import javax.validation.constraints.*;
 
 /*
 Our login and registration forms will use DTOs
@@ -17,34 +17,51 @@ to help with form rendering and processing
 */
 public class RegisterFormDTO extends LoginFormDTO{
     @NotNull
-    @NotBlank
+    @Size(min = 5, max = 255, message = "Invalid first name. Must be between 5 and 255 characters.")
+    private String firstName;
+
+    @NotNull
+    @Size(min = 5, max = 255, message = "Invalid last name. Must be between 5 and 255 characters.")
+    private String lastName;
+
+    @NotNull
     @Size(min = 5, max = 255, message = "Passwords Do Not Match.")
     private String verifyPassword;
 
     @NotNull
-    @NotBlank
-    @Size(min = 5, max = 255, message = "Invalid email. Must be between 5 and 255 characters.")
+    @Email
     private String email;
 
     @NotNull
-    @NotBlank
     @Size(min = 5, max = 255, message = "Invalid account number. Must be between 5 and 255 characters.")
     private String accountNumber;
 
     @NotNull
-    @NotBlank
-    @Size(min = 5, max = 255, message = "Invalid social security number. Must be between 5 and 255 characters.")
-    private String socialSecurityNumber;
+    @Min(value = 0)
+    private int socialSecurityNumber;
 
     @NotNull
-    @NotBlank
     @Size(min = 5, max = 255, message = "Invalid address. Must be between 5 and 255 characters.")
     private String address;
 
     @NotNull
-    @NotBlank
-    @Size(min = 5, max =11 , message = "Invalid phone number. Must be between 5 and 11 characters.")
+    @Min(value = 0)
     private int phoneNumber;
+
+    public String getFirstName(){
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public String getVerifyPassword(){
         return verifyPassword;
@@ -68,10 +85,10 @@ public class RegisterFormDTO extends LoginFormDTO{
         this.accountNumber=accountNumber;
     }
 
-    public String getSocialSecurityNumber(){
+    public int getSocialSecurityNumber(){
         return socialSecurityNumber;
     }
-    public void setSocialSecurityNumber(String socialSecurityNumber){
+    public void setSocialSecurityNumber(int socialSecurityNumber){
         this.socialSecurityNumber=socialSecurityNumber;
     }
 

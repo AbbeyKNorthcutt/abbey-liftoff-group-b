@@ -1,3 +1,7 @@
+@viewport {
+    width: auto;
+}
+
 .body-content {
     margin-top: 72px;
 }
@@ -60,4 +64,62 @@ div.product {
     border: 1px solid #e1e1e1;
     width: 80%;
     background-color: #e1e1e1;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar-inverse {
+    background-color: #BF7F3F;
+    border-color: #080808;
+}
+
+navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-brand > img {
+    display: block;
+}
+
+.navbar-toggler-icon{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.collapse {
+    display: none;
 }

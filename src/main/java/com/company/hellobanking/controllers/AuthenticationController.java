@@ -113,8 +113,6 @@ public class AuthenticationController {
         String password = registerFormDTO.getPassword();
         String verifyPassword = registerFormDTO.getVerifyPassword();
 
-        String email = registerFormDTO.getEmail();
-
         if (!password.equals(verifyPassword)) {
             errors.rejectValue("password", "passwords.mismatch", "Passwords do not match");
             model.addAttribute("title", "Register");
@@ -124,8 +122,13 @@ public class AuthenticationController {
         // If none of the above conditions are met, Create a new User and save in database.
         // Create new userSession and redirect to homepage.
         User newUser = new User(registerFormDTO.getUsername(),
-                registerFormDTO.getPassword(), registerFormDTO.getEmail(), registerFormDTO.getAccountNumber(),
-                registerFormDTO.getSocialSecurityNumber(), registerFormDTO.getAddress(),
+                registerFormDTO.getFirstName(),
+                registerFormDTO.getLastName(),
+                registerFormDTO.getPassword(),
+                registerFormDTO.getEmail(),
+                registerFormDTO.getAccountNumber(),
+                registerFormDTO.getSocialSecurityNumber(),
+                registerFormDTO.getAddress(),
                 registerFormDTO.getPhoneNumber());
         userRepository.save(newUser);
         setUserSessionKey(request.getSession(), newUser);

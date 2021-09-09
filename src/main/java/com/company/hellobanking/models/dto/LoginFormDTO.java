@@ -16,16 +16,12 @@ public class LoginFormDTO {
 
     /*The DTO for the login form needs only username and password fields.*/
     @NotNull
-    @NotBlank
     @Size(min = 5, max = 255, message = "Invalid username. Must be between 5 and 30 characters.")
     private String username;
 
     @NotNull
-    @NotBlank
     @Size(min = 5, max = 255, message = "Invalid password. Must be between 5 and 30 characters.")
     private String password;
-
-
 
     public String getUsername(){
         return username;
