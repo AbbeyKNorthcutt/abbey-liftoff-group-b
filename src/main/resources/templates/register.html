@@ -77,7 +77,7 @@
 
     <div class="form-group">
         <label>Phone #
-            <input class = "form-control" th:field="${registerFormDTO.phoneNumber}"/>
+            <input class = "form-control" th:field="${registerFormDTO.phoneNumber}" type = "phoneNumber"/>
         </label>
         <p class="error" th:errors="${registerFormDTO.phoneNumber}"></p>
     </div>
@@ -91,7 +91,7 @@
 
     <div class="form-group">
         <label>Social Security Number
-            <input class = "form-control" th:field="${registerFormDTO.socialSecurityNumber}"/>
+            <input class = "form-control" th:field="${registerFormDTO.socialSecurityNumber}" type = "socialSecurityNumber"/>
         </label>
         <p class="error" th:errors="${registerFormDTO.socialSecurityNumber}"></p>
     </div>

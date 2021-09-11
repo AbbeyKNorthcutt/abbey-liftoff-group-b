@@ -3,13 +3,6 @@ package com.company.hellobanking.models;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 
 /* we can authenticate users,
 we need users to authenticate!

@@ -1,7 +1,6 @@
 package com.company.hellobanking.models;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Objects;
 
 
