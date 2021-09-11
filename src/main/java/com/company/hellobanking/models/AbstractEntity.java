@@ -1,17 +1,16 @@
 package com.company.hellobanking.models;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
 
 /*Id generated for each user*/
 @MappedSuperclass
+@Table(name = "user")
 public abstract class AbstractEntity {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

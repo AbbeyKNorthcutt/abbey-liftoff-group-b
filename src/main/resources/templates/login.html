@@ -32,7 +32,7 @@
     <h1>Please Sign-In!</h1>
 </div>
 
-<form th:action="@{/login}" method="post">
+<form method="post">
 
     <div class="form-group">
         <label th:for="username">Username
@@ -51,8 +51,8 @@
     <input type="submit" class="btn btn-success" value= Sign-In>
 </form>
 
-<p>Forgot <a href="/username">Username</a> or <a href="/password">Password</a> ? </p>
-<p>Need Help? <a href="/contact">Chat Here>>></a></p>
+<p>Forgot <a th:href="@{/username}">Username</a> or <a th:href="@{/password}">Password</a> ? </p>
+<p>Need Help? <a th:href="@{/contact}">Chat Here>>></a></p>
 
 <div>
     <footer th:replace = "fragments :: footer"></footer>

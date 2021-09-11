@@ -6,7 +6,7 @@ import com.company.hellobanking.models.dto.LoginFormDTO;
 import com.company.hellobanking.models.dto.RegisterFormDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
+
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.management.openmbean.OpenDataException;
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -27,6 +25,7 @@ it needs a UserRepository instance. */
 
 @Controller
 public class AuthenticationController {
+
     @Autowired
     UserRepository userRepository;
 
@@ -133,7 +132,7 @@ public class AuthenticationController {
         userRepository.save(newUser);
         setUserSessionKey(request.getSession(), newUser);
 
-        return "redirect:";
+        return "redirect:/register_success";
     }
 
     // Handling the login data
@@ -172,7 +171,7 @@ public class AuthenticationController {
 
         setUserSessionKey(request.getSession(), theUser);
 
-        return "redirect:";
+        return "redirect:/personal_banking";
     }
 
     // Handling the logging out data

@@ -15,8 +15,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AuthenticationFilter implements HandlerInterceptor {
-    @Autowired
-    UserRepository userRepository;
 
     @Autowired
     AuthenticationController authenticationController;
