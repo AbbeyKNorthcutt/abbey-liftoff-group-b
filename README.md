@@ -1,3 +1,4 @@
+![registration page](https://user-images.githubusercontent.com/48425335/132971122-34d7a208-9631-4b13-b94a-b38b95e0237d.png)
 ~~# abbey-liftoff-group-b
 
 **_Project Title: Online Banking_**
@@ -54,3 +55,7 @@ https://www.figma.com/team_invite/redeem/AwIdLjnrSQlF4hj1cC0MrN~~
 ![site_map](https://user-images.githubusercontent.com/48425335/132971087-7979f82a-e2a0-442b-9c5f-d3d7335881e7.png)
 
 ![login page](https://user-images.githubusercontent.com/48425335/132971117-83aea587-a6f1-4832-9b3e-41ecc2c845de.png)
+
+![registration page](https://user-images.githubusercontent.com/48425335/132971124-2e1e877f-84a8-4eae-8373-70cd00086a01.png)
+
+![Rough MVP](https://user-images.githubusercontent.com/48425335/132971126-ca242ffd-4fdc-4caa-a317-85b2b5fddf19.png)
