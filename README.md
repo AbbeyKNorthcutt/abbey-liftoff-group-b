@@ -51,12 +51,5 @@ https://trello.com/invite/b/FxTOA6F7/450e75df29b1d3c964863b55192845cf/britaney-g
 Link to collaborate for wireframes:
 https://www.figma.com/team_invite/redeem/AwIdLjnrSQlF4hj1cC0MrN~~
 
-
-![](C:\Users\sunithabh\Desktop\LiftOff project\site_map.JPG)
-
-![](C:\Users\sunithabh\Desktop\LiftOff project\login page.JPG)
-
-![](C:\Users\sunithabh\Desktop\LiftOff project\registration page.JPG)
-
-![](C:\Users\sunithabh\Desktop\LiftOff project\Rough MVP.JPG)
+![site_map](https://user-images.githubusercontent.com/48425335/132971087-7979f82a-e2a0-442b-9c5f-d3d7335881e7.png)
 
