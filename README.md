@@ -1,4 +1,4 @@
-![registration page](https://user-images.githubusercontent.com/48425335/132971122-34d7a208-9631-4b13-b94a-b38b95e0237d.png)
+
 ~~# abbey-liftoff-group-b
 
 **_Project Title: Online Banking_**
