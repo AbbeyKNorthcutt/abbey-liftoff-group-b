@@ -262,12 +262,12 @@ th {
     border: 1px solid #ddd !important;
   }
 }
-@font-face {
+/*@font-face {
   font-family: 'Glyphicons Halflings';
 
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
+}*/
 .glyphicon {
   position: relative;
   top: 1px;
@@ -6534,7 +6534,7 @@ button.close {
   visibility: hidden;
 }
 .text-hide {
-  font: 0/0 a;
+  font-style: normal;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -6547,7 +6547,7 @@ button.close {
   position: fixed;
 }
 @-ms-viewport {
-  width: device-width;
+  width: auto;
 }
 .visible-xs,
 .visible-sm,
@@ -6778,10 +6778,9 @@ button.close {
       height: 100%;
     }
 
-    /* Set black background color, white text and some padding */
+    /* Set orange background color, white text and some padding */
     footer {
-      background-color: #51c0c4f;
-      color: white;
+      background-color: #BF7F3F;
       padding: 15px;
     }
 

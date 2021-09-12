@@ -6,7 +6,7 @@ import com.company.hellobanking.models.dto.LoginFormDTO;
 import com.company.hellobanking.models.dto.RegisterFormDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
+
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.management.openmbean.OpenDataException;
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -27,6 +25,7 @@ it needs a UserRepository instance. */
 
 @Controller
 public class AuthenticationController {
+
     @Autowired
     UserRepository userRepository;
 
@@ -39,6 +38,10 @@ public class AuthenticationController {
 
     /* The static field userSessionKey is the key used to store user IDs */
     private static final String userSessionKey = "user";
+
+    public AuthenticationController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     /* getUserFromSession looks for data with the key user in the user’s session.
     If it finds one, it attempts to retrieve the corresponding User object from the database.
@@ -108,6 +111,7 @@ public class AuthenticationController {
         register a custom error and return the user to the form. */
         String password = registerFormDTO.getPassword();
         String verifyPassword = registerFormDTO.getVerifyPassword();
+
         if (!password.equals(verifyPassword)) {
             errors.rejectValue("password", "passwords.mismatch", "Passwords do not match");
             model.addAttribute("title", "Register");
@@ -116,11 +120,19 @@ public class AuthenticationController {
 
         // If none of the above conditions are met, Create a new User and save in database.
         // Create new userSession and redirect to homepage.
-        User newUser = new User(registerFormDTO.getUsername(), registerFormDTO.getPassword());
+        User newUser = new User(registerFormDTO.getUsername(),
+                registerFormDTO.getFirstName(),
+                registerFormDTO.getLastName(),
+                registerFormDTO.getPassword(),
+                registerFormDTO.getEmail(),
+                registerFormDTO.getAccountNumber(),
+                registerFormDTO.getSocialSecurityNumber(),
+                registerFormDTO.getAddress(),
+                registerFormDTO.getPhoneNumber());
         userRepository.save(newUser);
         setUserSessionKey(request.getSession(), newUser);
 
-        return "redirect:";
+        return "redirect:/register_success";
     }
 
     // Handling the login data
@@ -159,7 +171,7 @@ public class AuthenticationController {
 
         setUserSessionKey(request.getSession(), theUser);
 
-        return "redirect:";
+        return "redirect:/personal_banking";
     }
 
     // Handling the logging out data
@@ -178,7 +190,7 @@ public class AuthenticationController {
     }
 
     @RequestMapping("/personal_banking")
-    public  String dispalyPersonalBanking(Model model){
+    public  String displayPersonalBanking(Model model){
         model.addAttribute("message", "Welcome To Your Personal Banking!!");
         return "personal_banking";
     }
