@@ -1,6 +1,6 @@
 -- Part 1: Test it with SQL
-Create TABLE user(
-id INTEGER PRIMARY KEY,
-username VARCHAR(255),
-password VARCHAR(255)
-);
+-- 1) Create Table users--
+
+
+-- Add an existing user
+
