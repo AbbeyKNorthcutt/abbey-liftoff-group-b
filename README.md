@@ -42,30 +42,20 @@ MySQL
 4 – What You’ll Have to Learn
 
 Working as a team / collaborating about our ideas, issues, solutions,etc.
-Learning more in depth on the features we are currently working on so in future, if required, we can implement some new feature to enhance the current one.
+Learning more in depth on the features we are currently working on so in the future, if required, we can implement some new feature to enhance the current one.
 
 5 – Project Tracker
 
-https://trello.com/invite/b/FxTOA6F7/450e75df29b1d3c964863b55192845cf/britaney-group-a-project-tracker
+https://trello.com/b/mMnxWodn/liftoff-project-2021
 
 Link to collaborate for wireframes:
-https://www.figma.com/team_invite/redeem/AwIdLjnrSQlF4hj1cC0MrN~~
+https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
 
-![](C:\Users\sunithabh\Desktop\LiftOff project\site_map.JPG)
+![](../../../Users/sunithabh/Desktop/LiftOff project/site_map.png)
 
-![](C:\Users\sunithabh\Desktop\LiftOff project\login page.JPG)
+![](../../../Users/sunithabh/Desktop/LiftOff project/login page.png)
 
-![](C:\Users\sunithabh\Desktop\LiftOff project\registration page.JPG)
+![](../../../Users/sunithabh/Desktop/LiftOff project/registration page.png)
 
-![](C:\Users\sunithabh\Desktop\LiftOff project\Rough MVP.JPG)
-
-
-
-
-
-
-
-
-
-
+![](../../../Users/sunithabh/Desktop/LiftOff project/Rough MVP.png)
