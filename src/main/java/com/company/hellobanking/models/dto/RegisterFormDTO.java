@@ -17,15 +17,15 @@ to help with form rendering and processing
 */
 public class RegisterFormDTO extends LoginFormDTO{
     @NotNull
-    @Size(min = 5, max = 255, message = "Invalid first name. Must be between 5 and 255 characters.")
+    @Size(min = 2, max = 255, message = "Invalid first name. Must be between 5 and 255 characters.")
     private String firstName;
 
     @NotNull
-    @Size(min = 5, max = 255, message = "Invalid last name. Must be between 5 and 255 characters.")
+    @Size(min = 2, max = 255, message = "Invalid last name. Must be between 5 and 255 characters.")
     private String lastName;
 
     @NotNull
-    @Size(min = 5, max = 255, message = "Passwords Do Not Match.")
+    @Size(min = 2, max = 255, message = "Passwords Do Not Match.")
     private String verifyPassword;
 
     @NotNull
@@ -33,19 +33,17 @@ public class RegisterFormDTO extends LoginFormDTO{
     private String email;
 
     @NotNull
-    @Size(min = 5, max = 255, message = "Invalid account number. Must be between 5 and 255 characters.")
+    @Size(min = 2, max = 255, message = "Invalid account number. Must be between 5 and 255 characters.")
     private String accountNumber;
 
     @NotNull
-    @Min(value = 0)
     private int socialSecurityNumber;
 
     @NotNull
-    @Size(min = 5, max = 255, message = "Invalid address. Must be between 5 and 255 characters.")
+    @Size(min = 2, max = 255, message = "Invalid address. Must be between 5 and 255 characters.")
     private String address;
 
     @NotNull
-    @Min(value = 0)
     private int phoneNumber;
 
     public String getFirstName(){
