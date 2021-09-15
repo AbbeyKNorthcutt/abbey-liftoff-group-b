@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <title>Personal Banking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<form method="post">
+
+    <h1>welcome to personal wallet</h1>
+
+    <div class="form-group">
+        <label th:for="userName">User Name
+        </label>
+    </div>
+        <div class="form-group">
+            <label th:for="accountNumber">Account number
+            </label>
+        </div>
+    <div class="form-group">
+        <label th:for="reward">Rewards
+        </label>
+    </div>
+    <div class="form-group">
+        <label th:for="reward"> Availabe balance
+        </label>
+    </div>
+    <div align="center">
+        <h2>Registration Succeeded!</h2>
+        <span>Full name:</span><span th:text="${user.username}"></span><br/>
+        <span>E-mail:</span><span th:text="${user.email}"></span><br/>
+        <span>Password:</span><span th:text="${user.password}"></span><br/>
+    </div>
+<div>
+    <footer th:replace = "fragments :: footer"></footer>
+</div>
+</form>
+</body>
+</html>
