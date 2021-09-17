@@ -10,6 +10,34 @@
 </head>
 
 <body>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container-fluid">
+        <img />
+        &emsp;
+        <a class="navbar-brand" href="#">Personal Banking</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Checkings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Savings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pay Your Bills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{personal_Wallet}">Personal Wallet</a>
+
+                </li>
+            </ul>
+        </div>
+</nav>
 <form method="post">
 
     <h1>welcome to personal wallet</h1>
@@ -30,15 +58,11 @@
         <label th:for="reward"> Availabe balance
         </label>
     </div>
-    <div align="center">
-        <h2>Registration Succeeded!</h2>
-        <span>Full name:</span><span th:text="${user.username}"></span><br/>
-        <span>E-mail:</span><span th:text="${user.email}"></span><br/>
-        <span>Password:</span><span th:text="${user.password}"></span><br/>
-    </div>
+
 <div>
     <footer th:replace = "fragments :: footer"></footer>
 </div>
+
 </form>
 </body>
 </html>
