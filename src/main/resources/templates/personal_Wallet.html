@@ -33,36 +33,48 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{personal_Wallet}">Personal Wallet</a>
-
                 </li>
             </ul>
         </div>
+        <div>
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/logout}">Sign-Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 <form method="post">
 
     <h1>welcome to personal wallet</h1>
 
     <div class="form-group">
-        <label th:for="userName">User Name
-        </label>
+            <p th:text="${' User Name : ' + username}"></p>
+
+    </div>
+    <div class="form-group">
+        <p th:text="${' Full Name : ' + fullName}"></p>
+
     </div>
         <div class="form-group">
-            <label th:for="accountNumber">Account number
-            </label>
+
+                <p th:text="${'Account number :' + account}"></p>
         </div>
     <div class="form-group">
-        <label th:for="reward">Rewards
-        </label>
+
+            <p th:text="${'Email : ' + email}"></p>
     </div>
     <div class="form-group">
-        <label th:for="reward"> Availabe balance
-        </label>
+            <p th:text="${'phoneNumber : ' + phoneNumber}"></p>
     </div>
 
+    <div class="form-group">
+        <p th:text="${'Address :' + address}"></p>
+    </div>
 <div>
     <footer th:replace = "fragments :: footer"></footer>
 </div>
-
 </form>
 </body>
 </html>
