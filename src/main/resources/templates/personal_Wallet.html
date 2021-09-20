@@ -61,16 +61,16 @@
 
                 <p th:text="${'Account number :' + account}"></p>
         </div>
+
+    <div class="form-group">
+        <p th:text="${'Available balance :' + ' $ 50,00,000'}"></p>
+    </div>
+    <div class="form-group">
+        <p th:text="${'Reward:' + '10,000'}"></p>
+    </div>
     <div class="form-group">
 
             <p th:text="${'Email : ' + email}"></p>
-    </div>
-    <div class="form-group">
-            <p th:text="${'phoneNumber : ' + phoneNumber}"></p>
-    </div>
-
-    <div class="form-group">
-        <p th:text="${'Address :' + address}"></p>
     </div>
 <div>
     <footer th:replace = "fragments :: footer"></footer>
