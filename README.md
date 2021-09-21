@@ -52,10 +52,10 @@ Link to collaborate for wireframes:
 https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
 
-![](../../../Users/sunithabh/Desktop/LiftOff project/site_map.png)
+![image](https://user-images.githubusercontent.com/48425335/134255382-6fd87c21-d907-4172-bba9-b21a06876bbb.png)
 
-![](../../../Users/sunithabh/Desktop/LiftOff project/login page.png)
+![image](https://user-images.githubusercontent.com/48425335/134255391-c09730f7-5a27-4acb-80cc-0bef027dbf33.png)
 
-![](../../../Users/sunithabh/Desktop/LiftOff project/registration page.png)
+![image](https://user-images.githubusercontent.com/48425335/134255405-cacfe234-8ca3-4688-af4d-b62c3ce92e7d.png)
 
-![](../../../Users/sunithabh/Desktop/LiftOff project/Rough MVP.png)
+![image](https://user-images.githubusercontent.com/48425335/134255419-cbe61acd-3f72-414c-91b5-0fce75d0ac4c.png)
