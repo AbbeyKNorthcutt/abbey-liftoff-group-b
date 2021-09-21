@@ -37,10 +37,21 @@ public class User extends AbstractEntity{
 
     @Column(name = "phone_number")
     private int phoneNumber;
+
+    @Column(name = "reset_password_token")
+    private String resetPasswordToken;
    /*
     //Hashing Passwords--- bcrypt hash algorithm//
     -- make it static so it can be shared by all User objects.
     */
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
+    }
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
@@ -120,9 +131,16 @@ public class User extends AbstractEntity{
         this.phoneNumber=phoneNumber;
     }
 
+    public String getPwHash() {
+        return pwHash;
+    }
+
+    public void setPwHash(String pwHash) {
+        this.pwHash = pwHash;
+    }
 
     /*User objects should also be responsible for determining
-    if a given password is a match for the hash stored by the object*/
+        if a given password is a match for the hash stored by the object*/
     public boolean isMatchingPassword(String password) {
         return encoder.matches(password, pwHash);
     }
