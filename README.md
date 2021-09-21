@@ -51,11 +51,9 @@ https://trello.com/b/mMnxWodn/liftoff-project-2021
 https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
 
-![](C:\Users\sunithabh\Desktop\LiftOff project\site_map.JPG)
+![image](https://user-images.githubusercontent.com/48425335/134255158-ea9513ee-b950-46fc-8929-a861b202ed4a.png)
 
-![](C:\Users\sunithabh\Desktop\LiftOff project\login page.JPG)
-
-![](C:\Users\sunithabh\Desktop\LiftOff project\registration page.JPG)
-
-![](C:\Users\sunithabh\Desktop\LiftOff project\Rough MVP.JPG)
+![image](https://user-images.githubusercontent.com/48425335/134255167-ed2f1a9f-640f-4140-b8ae-218d98ef938d.png)
+![image](https://user-images.githubusercontent.com/48425335/134255183-b3df9ea3-aac2-4201-b792-d4128df3ec4a.png)
+![image](https://user-images.githubusercontent.com/48425335/134255201-91ad1b54-545c-4055-941a-8b31a1624b10.png)
 
