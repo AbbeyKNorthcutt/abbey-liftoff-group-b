@@ -1,3 +1,8 @@
+.map{
+left-margin: 20px auto;
+padding: 20px;
+}
+
 @viewport {
     width: auto;
 }
