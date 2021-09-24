@@ -7,6 +7,7 @@ import java.util.Objects;
 /*Id generated for each user*/
 @MappedSuperclass
 @Table(name = "user")
+
 public abstract class AbstractEntity {
     @Id
     @Column(name = "id")

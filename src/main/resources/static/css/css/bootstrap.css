@@ -1266,6 +1266,8 @@ h6 .small,
 h1,
 .h1 {
   font-size: 36px;
+  color: #0a3f7a;
+  font-style: bold;
 }
 h2,
 .h2 {
@@ -3980,11 +3982,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li {
   position: relative;
   display: block;
+  text-decoration: none;
 }
 .nav > li > a {
   position: relative;
   display: block;
   padding: 10px 15px;
+  text-decoration: none;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4450,6 +4454,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;

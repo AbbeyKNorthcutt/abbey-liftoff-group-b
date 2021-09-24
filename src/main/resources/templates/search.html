@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace = "fragments :: head"></head>
+
+<body >
+<nav th:replace = "fragments :: navbar"></nav>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/landing}">Home</a>
+        </li>
+    </ul>
+</div>
+<form th:action="@{/search}" method = "post">
+    <h2>ATM Locator Search using Waze</h2>
+    <div class = "map">
+    <iframe src="https://embed.waze.com/iframe?zoom=14&lat=-23.55052&lon=-46.63331&pin=1&desc=1"
+            width="80%" height="400"></iframe>
+    </div>
+</form>
+<div>
+   <footer th:replace = "fragments :: footer"></footer>
+</div>
+</body>
+</html>
