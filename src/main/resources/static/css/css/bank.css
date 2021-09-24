@@ -123,3 +123,15 @@ navbar-fixed-top {
 .collapse {
     display: none;
 }
+
+.container-fluid{
+    width: 1000px;
+    height: 217px;
+    background-color: #1c0c4f
+
+}
+.btn-success {
+    color: #fff;
+    background-color: #ff8351;
+    border-color: #d4e3fc;
+}

@@ -18,12 +18,12 @@
 <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-info">
 
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="nav nav-pills" role = "tablist">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/login}">Sign-In</a>
+                <a class="nav-link active"  data-toggle = "pill" th:href="@{/login}">Sign-In</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/register}">Register</a>
+                <a class="nav-link active" data-toggle="pill" th:href="@{/register}">Register</a>
             </li>
         </ul>
     </div>

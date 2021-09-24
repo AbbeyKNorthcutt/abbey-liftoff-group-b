@@ -5,10 +5,7 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "appointment")
-public class Appointment extends AbstractEntity{
-
-    @Column(name = "zip_code")
-    private int zipCode;
+public class Appointment extends User{
 
     @Column(name = "select_date_and_time")
     private Calendar selectDateAndTime;
@@ -21,15 +18,11 @@ public class Appointment extends AbstractEntity{
 
     public Appointment(){}
 
-    public Appointment(int zipCode, Calendar selectDateAndTime,String question, String email){
+    public Appointment(Calendar selectDateAndTime,String question, String email){
         this.question = question;
-        this.zipCode = zipCode;
         this.selectDateAndTime = selectDateAndTime;
         this.email = email;
     }
-
-    public int getZipCode(){return zipCode;}
-    public void setZipCode(int zipCode){this.zipCode = zipCode;}
 
     public Calendar getSelectDateAndTime(){return selectDateAndTime;}
     public void setSelectDateAndTime(Calendar selectDateAndTime) {
