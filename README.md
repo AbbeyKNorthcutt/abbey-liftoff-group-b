@@ -8,25 +8,24 @@ We’re developing a banking application that is going to reshape how you bank a
 
 2 – Features
 
->> Local Authentication / User login and registration:
-> The user registers using identifiers.The application stores user credentials in the database.
-The application sends a verification email/message to validate the registration.
-Post successful registration, the user enters credentials for logging in.
-On successful authentication, the user is allowed access to specific resources.
+Authentication / Existing User login
+>> The User registers using identifiers. The application stores user credentials in the database. 
 
->> Schedule An appointment with an advisor / Invest on your future :
-> A User can schedule an appointment with a bank advisor to learn more about the investments they can make. A user can choose a date and time using the calendar provided and enter their email address to get notified about their appointment.
+New User Registration
+>> Post successful registration, the user enters credentials for logging in. On successful authentication, the user can carry out their personal banking activities like checking/savings accounts, using personal wallet, etc.
 
->> Apply for a loan / Borrow Loans:
-> A User can apply for different types of loans like personal, home, auto loans.
+Reset Password
+>> A user can reset their password in case they forget their password to log in to their account by providing their Email address.
 
->> Add / Personal Wallet :A User can add personal cards to their account.
+Add banking cards/ gift cards and view available balance and reward points with the Personal Wallet 
+>> A User can add their banking cards/ gift cards in the personal wallet feature for them to use to pay for their expenses or transfer money to other accounts. A User can also see the available balance and rewards points.
 
->> Budgeting / create a table to track their bills and expenses:
-> A User can track their bills and expenses with this table. A User can enter the cost of all the items and will be able to get back the amount left for them after all the bills and expenses are accounted for which they can use for investments and savings.
+Search for ATMs/Branches
+>> A User can search for the nearest ATM / Branches based on their current zip code. 
+
 
 >> Future Enhancements:
-> The future enhancement for this app would be adding higher authentication and security.
+A User can schedule an appointment with an advisor to learn more about the investments they can make. A User can choose a date and time using the calendar provided and enter their email Id to get notified about their appointment.
 
 3 – Technologies
 
