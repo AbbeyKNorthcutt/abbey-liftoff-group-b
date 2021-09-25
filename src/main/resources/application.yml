@@ -1,0 +1,21 @@
+spring:
+  thymeleaf: # Thymeleaf
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  resources: # Static resources
+    static-locations: file:src/main/resources/static/
+    cache:
+      period: 0
+  mail:
+      host: smtp.gmail.com
+      username: shweta2kb@gmail.com
+      password: acoquonsvifvbjdl
+      port: 587
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true

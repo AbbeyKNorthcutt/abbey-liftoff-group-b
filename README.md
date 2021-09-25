@@ -58,4 +58,3 @@ https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 ![registration page](https://user-images.githubusercontent.com/48425335/132971124-2e1e877f-84a8-4eae-8373-70cd00086a01.png)
 
 ![Rough MVP](https://user-images.githubusercontent.com/48425335/132971126-ca242ffd-4fdc-4caa-a317-85b2b5fddf19.png)
-

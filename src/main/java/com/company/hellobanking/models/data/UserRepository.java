@@ -12,6 +12,8 @@ public interface UserRepository extends CrudRepository<User, Integer> {
     /* this method is intended to take a username, and return the given user with that username. */
     User findByUsername(String username);
    // User findById(String id);
+    public User findByResetPasswordToken(String token);
+    public User findByEmail(String email);
 
 }
 
