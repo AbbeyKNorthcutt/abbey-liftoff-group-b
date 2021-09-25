@@ -4,6 +4,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
 
+
 /* we can authenticate users,
 we need users to authenticate!
 We’ll start by adding a User model */

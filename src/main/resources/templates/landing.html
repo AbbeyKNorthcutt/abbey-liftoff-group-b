@@ -11,7 +11,15 @@
 
     <title>Personal Banking</title>
 </head>
-<body class="container">
+<body>
+
+<nav th:replace = "fragments :: navbar"></nav>
+
+<div>
+    <h1>Welcome To Your Online Banking !!</h1>
+</div>
+<!--
+>>>>>>> 1434a632bbbf063c0eecaffb74b3459da6fdf52e
 <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-info">
     <div class="container-fluid">
         <div>
@@ -47,15 +55,16 @@
                 <a class="nav-link" th:href="@{/register}">Register</a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" th:href="@{/forgot_password}">Forgot your password?</a>
+=======
+                <a class="nav-link" th:href="@{/search}">Search</a>
+>>>>>>> 1434a632bbbf063c0eecaffb74b3459da6fdf52e
             </li>
         </ul>
     </div>
-</nav>
+</nav> -->
 
-<div>
-    <h1>Welcome To Your Online Banking !!</h1>
-</div>
 
 <form th:action="@{/login}" method="post">
     <input type="submit" value="Sign-In" class="btn btn success" />
