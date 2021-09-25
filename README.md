@@ -46,6 +46,7 @@ Learning more in depth on the features we are currently working on so in future,
 5 – Project Tracker
 
 https://trello.com/b/mMnxWodn/liftoff-project-2021
+<<<<<<< HEAD
 
 https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
@@ -56,5 +57,15 @@ https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
 ![registration page](https://user-images.githubusercontent.com/48425335/132971124-2e1e877f-84a8-4eae-8373-70cd00086a01.png)
 
+=======
+
+https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
+
+![site_map](https://user-images.githubusercontent.com/48425335/132971087-7979f82a-e2a0-442b-9c5f-d3d7335881e7.png)
+
+![login page](https://user-images.githubusercontent.com/48425335/132971117-83aea587-a6f1-4832-9b3e-41ecc2c845de.png)
+
+![registration page](https://user-images.githubusercontent.com/48425335/132971124-2e1e877f-84a8-4eae-8373-70cd00086a01.png)
+>>>>>>> c7fd4e44197662e3ed19beb39aebbfc9e000800e
 
 ![Rough MVP](https://user-images.githubusercontent.com/48425335/132971126-ca242ffd-4fdc-4caa-a317-85b2b5fddf19.png)
