@@ -4,11 +4,11 @@
 <head th:replace = "fragments :: head"></head>
 <body>
 
-<nav th:replace = "fragments :: navbar"></nav>
+   <nav th:replace = "fragments :: navbar"></nav>
 
-<div>
-    <h1>Welcome To Your Online Banking !!</h1>
-</div>
+   <div>
+      <h1>Welcome To Your Online Banking !!</h1>
+   </div>
 <!--
 <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-info">
     <div class="container-fluid">
@@ -48,12 +48,12 @@
 </nav> -->
 
 
-<form th:action="@{/login}" method="post">
-    <input type="submit" value="Sign-In" />
-</form>
-<div>
-  <footer th:replace = "fragments :: footer"></footer>
-</div>
+   <form th:action="@{/login}" method="post">
+      <input type="submit" value="Sign-In" />
+   </form>
+   <div>
+     <footer th:replace = "fragments :: footer"></footer>
+   </div>
 
 </body>
 </html>
