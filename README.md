@@ -49,17 +49,12 @@ https://trello.com/b/mMnxWodn/liftoff-project-2021
 
 https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
-<<<<<<< HEAD
+
 ![site_map](https://user-images.githubusercontent.com/48425335/132971087-7979f82a-e2a0-442b-9c5f-d3d7335881e7.png)
 
 ![login page](https://user-images.githubusercontent.com/48425335/132971117-83aea587-a6f1-4832-9b3e-41ecc2c845de.png)
 
 ![registration page](https://user-images.githubusercontent.com/48425335/132971124-2e1e877f-84a8-4eae-8373-70cd00086a01.png)
-=======
-![image](https://user-images.githubusercontent.com/48425335/134255011-579f3245-e198-4d2b-9b0b-f46565a3847a.png)
-![image](https://user-images.githubusercontent.com/48425335/134255055-b523ae8f-53ea-4bc1-91cd-41913b3a44b4.png)
-![image](https://user-images.githubusercontent.com/48425335/134255077-81d74c07-64d1-4fd9-ac2b-0d4741912116.png)
-![image](https://user-images.githubusercontent.com/48425335/134255093-c8754f91-0cc9-4f39-b8ba-1c71ec4708d0.png)
->>>>>>> personal_wallet
+
 
 ![Rough MVP](https://user-images.githubusercontent.com/48425335/132971126-ca242ffd-4fdc-4caa-a317-85b2b5fddf19.png)
