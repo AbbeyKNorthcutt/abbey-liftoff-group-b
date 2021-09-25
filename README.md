@@ -8,25 +8,24 @@ We’re developing a banking application that is going to reshape how you bank a
 
 2 – Features
 
->> Local Authentication / User login and registration:
-> The user registers using identifiers.The application stores user credentials in the database.
-The application sends a verification email/message to validate the registration.
-Post successful registration, the user enters credentials for logging in.
-On successful authentication, the user is allowed access to specific resources.
+Authentication / Existing User login
+>> The User registers using identifiers. The application stores user credentials in the database. 
 
->> Schedule An appointment with an advisor / Invest on your future :
-> A User can schedule an appointment with a bank advisor to learn more about the investments they can make. A user can choose a date and time using the calendar provided and enter their email address to get notified about their appointment.
+New User Registration
+>> Post successful registration, the user enters credentials for logging in. On successful authentication, the user can carry out their personal banking activities like checking/savings accounts, using personal wallet, etc.
 
->> Apply for a loan / Borrow Loans:
-> A User can apply for different types of loans like personal, home, auto loans.
+Reset Password
+>> A user can reset their password in case they forget their password to log in to their account by providing their Email address.
 
->> Add / Personal Wallet :A User can add personal cards to their account.
+Add banking cards/ gift cards and view available balance and reward points with the Personal Wallet 
+>> A User can add their banking cards/ gift cards in the personal wallet feature for them to use to pay for their expenses or transfer money to other accounts. A User can also see the available balance and rewards points.
 
->> Budgeting / create a table to track their bills and expenses:
-> A User can track their bills and expenses with this table. A User can enter the cost of all the items and will be able to get back the amount left for them after all the bills and expenses are accounted for which they can use for investments and savings.
+Search for ATMs/Branches
+>> A User can search for the nearest ATM / Branches based on their current zip code. 
 
->> Future Enhancements:
-> The future enhancement for this app would be adding higher authentication and security.
+
+Future Enhancements:
+>> A User can schedule an appointment with an advisor to learn more about the investments they can make. A User can choose a date and time using the calendar provided and enter their email Id to get notified about their appointment.
 
 3 – Technologies
 
@@ -50,8 +49,10 @@ https://trello.com/b/mMnxWodn/liftoff-project-2021
 
 https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
-![image](https://user-images.githubusercontent.com/48425335/134255011-579f3245-e198-4d2b-9b0b-f46565a3847a.png)
-![image](https://user-images.githubusercontent.com/48425335/134255055-b523ae8f-53ea-4bc1-91cd-41913b3a44b4.png)
-![image](https://user-images.githubusercontent.com/48425335/134255077-81d74c07-64d1-4fd9-ac2b-0d4741912116.png)
-![image](https://user-images.githubusercontent.com/48425335/134255093-c8754f91-0cc9-4f39-b8ba-1c71ec4708d0.png)
+![site_map](https://user-images.githubusercontent.com/48425335/132971087-7979f82a-e2a0-442b-9c5f-d3d7335881e7.png)
 
+![login page](https://user-images.githubusercontent.com/48425335/132971117-83aea587-a6f1-4832-9b3e-41ecc2c845de.png)
+
+![registration page](https://user-images.githubusercontent.com/48425335/132971124-2e1e877f-84a8-4eae-8373-70cd00086a01.png)
+
+![Rough MVP](https://user-images.githubusercontent.com/48425335/132971126-ca242ffd-4fdc-4caa-a317-85b2b5fddf19.png)
