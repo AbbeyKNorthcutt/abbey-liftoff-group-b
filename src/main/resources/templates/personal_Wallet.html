@@ -12,6 +12,14 @@
 <body>
 <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-info">
     <div class="container-fluid">&emsp;
+
+
+        <div class="container text-center">
+            <div>
+                <img th:src="@{/images/logo.jpeg}" width="200px" height="200px"/>
+            </div>
+        &emsp;
+
         <a class="navbar-brand" href="#">Personal Banking</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav"
@@ -45,34 +53,37 @@
 </nav>
 <form method="post">
 
-    <h1>welcome to personal wallet</h1>
+    <h2>welcome to personal wallet</h2>
 
-    <div class="form-group">
-            <p th:text="${' User Name : ' + username}"></p>
 
-    </div>
-    <div class="form-group">
-        <p th:text="${' Full Name : ' + fullName}"></p>
-
-    </div>
-        <div class="form-group">
-
-                <p th:text="${'Account number :' + account}"></p>
-        </div>
-
-    <div class="form-group">
-        <p th:text="${'Available balance :' + ' $ 50,00,000'}"></p>
-    </div>
-    <div class="form-group">
-        <p th:text="${'Reward:' + '10,000'}"></p>
-    </div>
-    <div class="form-group">
-
-            <p th:text="${'Email : ' + email}"></p>
-    </div>
 <div>
     <footer th:replace = "fragments :: footer"></footer>
 </div>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>User Name</th>
+
+            <th> <label for="amounts">Avaiable Balance:</label>
+                <select id="amounts" name="amount">
+                    <option value="1">10000</option>
+                    <option value="2">20000</option>
+                    <option value="3">30000</option>
+                    <option value="4">40000</option>
+                </select></th>
+            <th>Rewards</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${username}"></td>
+            <td th:text="${account}"></td>
+            <td>10,000</td>
+            <td th:text="${email}"></td>
+        </tr>
+        </tbody>
+    </table>
 </form>
 </body>
 </html>
