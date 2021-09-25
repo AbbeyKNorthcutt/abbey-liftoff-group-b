@@ -24,8 +24,8 @@ Search for ATMs/Branches
 >> A User can search for the nearest ATM / Branches based on their current zip code. 
 
 
->> Future Enhancements:
-A User can schedule an appointment with an advisor to learn more about the investments they can make. A User can choose a date and time using the calendar provided and enter their email Id to get notified about their appointment.
+Future Enhancements:
+>> A User can schedule an appointment with an advisor to learn more about the investments they can make. A User can choose a date and time using the calendar provided and enter their email Id to get notified about their appointment.
 
 3 – Technologies
 
