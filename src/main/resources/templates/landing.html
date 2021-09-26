@@ -12,25 +12,25 @@
 </head>
 
 
+
 <body class="container">
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-info">
+<!--<nav th:replace = "fragments :: navbar"></nav>-->
+
     <div class="container-fluid">
         <div>
             <img src="../images/logo.jpeg" width="200px" height="200px">
             <img src="../images/logo1.png" width="200px" height="200px">
         </div>
     </div>
-</nav>
+
 <body>
-<header th:replace = "fragments :: header"></header>
+<!--<header th:replace = "fragments :: header"></header>-->
 
 <div class = "container-fluid">
     <img src="@{/images/bank_logo.png}" height="90" width="110"/>
 </div>
 
 <nav class="navbar" style ="background-image: url(/images/banking_img.png)" >
-
-
      <div class = "navbar-header">
         <a>Personal Banking</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -59,11 +59,10 @@
                 <a class="nav-link" th:href="@{/register}">Register</a>
             </li>
             <li class="nav-item">
-
                 <a class="nav-link" th:href="@{/forgot_password}">Forgot your password?</a>
-
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" th:href="@{/search}">Search</a>
-
             </li>
         </ul>
     </div>
