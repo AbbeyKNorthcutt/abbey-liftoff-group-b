@@ -1,8 +1,5 @@
 package com.company.hellobanking.models.dto;
 
-
-import org.hibernate.validator.constraints.Range;
-
 import javax.validation.constraints.*;
 
 /*

@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
 
-<body class ="container">
+<!--<head>
+  <meta charset="UTF-8">
+  <title>Schedule an Appointment with an Advisor</title>
+  <link th:href="@{/css/bootstrap.css}" rel="stylesheet" >
+  <link th:href="@{/css/bank.css}" rel="stylesheet" >
+  <script type ="text/javascript" th:src = "@{/js/bootstrap.js}"></script>-->
 
-<nav ></nav>
+<head th:replace = "fragments :: head"></head>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
 
 <div class ="container text-center">
   <h1>Want To Invest with Us!!</h1>
+</div>
+
+<div>
+  <h1>Schedule Your Appointment With An Advisor!!!</h1>
+</div>
+
+<p>Call <a href="">(000-000-0000)</a> to schedule an appointment with an advisor now !! </p>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+<form method = "post">
+
+  <!-- The slideshow -->
+  <div class = "carousel-inner">
+  <div class="carousel-item active">
+    <label> What is the best day and time to reach you?
+      <input class = "form-control" type = "datetime-local" th:field = "${appointmentDTO.selectDateAndTime}"/>
+      <p class="error" th:errors="${appointmentDTO.selectDateAndTime}"></p>
+    </label>
+  </div>
+
+  <div class="carousel-item">
+    <label> What Would You Like To Talk About?
+      <textarea class="form-control" th:field = "${appointmentDTO.question}"></textarea>
+      <p class="error" th:errors="${appointmentDTO.question}"></p>
+    </label>
+  </div>
+
+  <div class="carousel-item">
+    <label> Enter Your Email
+      <input class="form-control" th:field = "${appointmentDTO.email}" type = "email"/>
+      <p class="error" th:errors="${appointmentDTO.email}"></p>
+    </label>
+  </div>
+  </div>
+
+  <div>
+    <input type="submit" class="btn btn-success" value="Book My Appointment"/>
+  </div>
+
+
+</form>
+</div>
+
+<div>
+  <footer th:replace = "fragments :: footer"></footer>
 </div>
 
 </body>

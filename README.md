@@ -41,17 +41,20 @@ MySQL
 4 – What You’ll Have to Learn
 
 Working as a team / collaborating about our ideas, issues, solutions,etc.
-Learning more in depth on the features we are currently working on so in the future, if required, we can implement some new feature to enhance the current one.
+Learning more in depth on the features we are currently working on so in future, if required, we can implement some new feature to enhance the current one.
 
 5 – Project Tracker
 
 https://trello.com/b/mMnxWodn/liftoff-project-2021
 
+
 Link to collaborate for wireframes:
 
 https://app.moqups.com/m0AB3RURQ8/edit/page/af8d24e3e
 
+
 ![site_map](https://user-images.githubusercontent.com/48425335/132971087-7979f82a-e2a0-442b-9c5f-d3d7335881e7.png)
+
 
 ![login page](https://user-images.githubusercontent.com/48425335/132971117-83aea587-a6f1-4832-9b3e-41ecc2c845de.png)
 

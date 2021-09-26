@@ -4,10 +4,7 @@ spring:
     mode: HTML
     encoding: UTF-8
     prefix: file:src/main/resources/templates/
-  resources: # Static resources
-    static-locations: file:src/main/resources/static/
-    cache:
-      period: 0
+
   mail:
       host: smtp.gmail.com
       username: shweta2kb@gmail.com
@@ -19,3 +16,10 @@ spring:
             auth: true
             starttls:
               enable: true
+
+
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0
